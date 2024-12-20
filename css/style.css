@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+}
+header img{
+  width: 180px;
+  margin-top: 0.5%;
+  
+}
+header{
+    background: #111111;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 8px;
+    column-gap: 24px;
+    justify-content: space-around;
+}
+header ul {
+    list-style: none;
+    display: flex;
+   
+}
+header li + li {
+    margin-left: 24px;
+}
+header a {
+    text-decoration: none;
+    color: #ebebeb;
+    transition: color 0.3s,border 0.3s;
+
+}
+header a:hover{
+    color: #f13239;
+    border-top: 1px solid rgb(124, 12, 12);
+    padding: 5px 0px;
+}
+#menu-mbl{
+    display: none;
+}
+#hero{
+    display: flex;
+    height: auto;
+    min-height: 320px;
+    background-size: cover;
+    object-fit: contain;
+    background-position: center 18%;
+    transition: background-image 0.1s;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 24px;
+    flex-direction: column;
+}
+
+#h1-div{
+   display: flex;
+   justify-content: center;
+}
+h1 {
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 24px;
+    font-size: 39px;
+    color: #111111;
+    
+}
+#dot{
+    display: flex;   
+}
+#dot span {
+  background-color: #ebebeb;
+  border-radius: 50%;
+  width: 18px;
+  height: 14px;
+
+}
+#dot span+span{
+    margin-left: 16px;
+}
+#dot #active{
+ background: #f13239;
+}
+#gallery {
+ max-width: 1200px;
+ margin: 64px auto 0;
+ padding: 0 24px;
+
+}
+#gallery h2{
+ margin-bottom: 24px;
+ color: #111111;
+ border-left: 4px solid #f13239;
+ padding-left: 8px;
+
+}
+#gallery-row{
+    margin: 0 auto;
+    gap: 24px;
+    display: flex;
+    flex-wrap: wrap;
+}
+#gallery-row div {
+   flex: 1 1 250px;
+   
+}
+#gallery-row img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 16px;
+}
+#gallery-row p{
+ font-weight: bold;
+}
+
+#history{
+    margin: 64px 0 0px;
+    padding: 92px 24px 0px;
+    border-top: 4px solid #f13239;
+    background: #111111;
+}
+#history #container{
+    max-width: 1200px;
+    border-bottom:1px solid #f13239 ;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 24px;
+    gap: 24px;
+}
+#history p + p {
+    margin-top: 10px;
+}
+#col h2{
+    margin-bottom: 24px;
+    border-left: 4px solid #f13239;
+    padding-left: 5px;
+}
+#col{
+    color: #ebebeb;
+}
+#col p {
+    line-height: 1.4;
+}
+
+#col p + p ,a{
+    color: #f13239;
+}
+#container #col {
+    flex: 1 1 350px;
+}
+#container img{
+ 
+    width: 100%;
+
+}
+footer{
+    text-align: center;
+    color: #ebebeb;
+    background: #111111;
+    padding: 40px ;
+    font-size: 11pt;
+}
+footer a {
+    text-decoration: none;
+    transition: color 0.2s;
+}
+footer a:hover {
+    color: #ebebeb;
+}
+@media screen and (max-width:600px) {
+
+
+
+    header{
+        justify-content: space-between;
+        padding: 0 24px;
+        height: 80px;
+    }
+ #hero{ 
+   height: auto;
+   min-height: 270px;
+   padding: 16px;
+}
+    header img {
+       
+        padding-top: 10px;
+    }
+    nav{
+       display: none;
+    }
+    #menu-mbl{
+      display:flex;
+  
+     
+    }
+    #menu-toggle{
+       font-size: 24px; 
+       padding-right: 18px;
+       background: none;
+       border: none;
+       color: white;
+       cursor: pointer;
+    }
+    #menuList{
+        position: absolute;
+        padding: 0;
+        margin: 0;
+        left: 45%;
+        top: -0.1%;
+        display: none;
+        list-style: none;
+        flex-direction: column;
+         width: 60%;
+        background-color: #ebebeb;
+        height: 100vh;
+        opacity: 0.9;
+      
+       
+    }
+    #menuList li {
+        text-align:left;
+        margin: 0;
+        padding: 10px 20px;
+        font-size: 20pt;
+    }
+    #menuList a {
+         color: #111111;
+         opacity: 0.9;
+        font-family: "Bebas Neue", serif;
+        border: none;
+       
+    }
+    #menuList a:hover{
+        color: #f13239;
+    }
+    #menu-close{
+    
+        font-size: 25pt;
+        color: rgba(116, 114, 114, 0.651);
+        text-align: left;
+        padding: 10px 15px 5px;
+        background: none;
+        margin-bottom: 30px;
+    }
+    #menu-close:hover{
+        color: #f13239;
+        
+    }
+    #menuList button {
+        border-bottom: 1px solid #ccc;
+    
+        border-top: none;
+        border-left: none;
+        border-left: none;
+    }
+  
+    #menuList.active{
+        display: flex;
+    }
+    #dot span {
+        width:10px ;
+        height: 10px;
+    }
+}
+   
